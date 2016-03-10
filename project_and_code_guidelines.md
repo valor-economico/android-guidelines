@@ -2,8 +2,8 @@
 
 ## Table of Contents
 
-* [1. Project guidelines](#1-project-guidelines)
-	* [1.1. Project structure](#11-project-structure)
+* [1 Project guidelines](#1-project-guidelines)
+	* [1.1 Project structure](#11-project-structure)
 	* [1.2 File name](#12-filen-naming)
 		* [1.2.1 Class files](#121-class-files)
 		* [1.2.2 Resources files](#121-resources-files)
@@ -11,10 +11,34 @@
 			* [1.2.2.2 Layout files](#1222-layout-files)
 			* [1.2.2.3 Menu files](#1223-menu-files)
 			* [1.2.2.4 Values files](#1224-values-files)
-* [2. Code guidelines](#2-code-guidelines)
+* [2 Code guidelines](#2-code-guidelines)
 	* [2.1 Java language rules](#21-java-language-rules)
-	* [2.1.1 Don't ignore exceptions](#211-dont-ignore-exceptions)
-	* [2.1.2 Don't catch generic exception](#212-dont-catch-generic-exception)
+		* [2.1.1 Don't ignore exceptions](#211-dont-ignore-exceptions)
+		* [2.1.2 Don't catch generic exception](#212-dont-catch-generic-exception)
+		* [2.1.3 Don't use finalizers](#213-dont-use-finalizers)
+		* [2.1.4 Fully qualify imports](#214-fully-qualify-imports])
+	* [2.2 Java style-rules](#22-java-style-rules)
+		* [2.2.1 Fields definition and naming](#221-fields-definition-and-naming)
+		* [2.2.3 Treat acronyms as words](#223-treat-acronyms-as-words)
+		* [2.2.4 Use spaces for indentation](#224-use-spaces-for-indentation)
+		* [2.2.5 Use standard brace style](#225-use-standard-brace-style)
+		* [2.2.6 Annotations](#226-annotations)
+			* [2.2.6.1 Annotations practices](#2261-annotations-practices)
+			* [2.2.6.2 Annotations style](#2262-annotations-style)
+		* [2.2.7 Limit variable scope](#227-limit-variable-scope)
+		* [2.2.8 Order import statements](#228-order-import-statements)
+		* [2.2.9 Logging guidelines](#229-logging-guidelines)
+		* [2.2.10 Class member ordering](#2210-class-member-ordering)
+		* [2.2.11 Parameter ordering in methods](#2211-parameter-ordering-in-methods)
+		* [2.2.13 String constants, naming and values](#2212-string-constants-naming-and-values)
+		* [2.2.14 Arguments in Fragments and Activities](#2213-arguments-in-fragments-and-activities)
+		* [2.2.15 Line length limit](#2215-line-length-limit)
+			* [2.2.15.1 Line-wrapping strategies](#22151-line-wrapping-strategies)
+		* [2.2.16 RxJava chains styling](#2216-rxjava-chains-styling)
+	* [2.3 XML style rules](#23-xml-style-rules)
+		* [2.3.1 Use self closing tags](#231-use-self-closing-tags)
+		* [2.3.2 Resources naming](#232-resources-naming)
+	
 
 # 1. Project guidelines
 
