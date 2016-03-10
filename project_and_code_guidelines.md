@@ -1,3 +1,21 @@
+# The official Ribot Android project and code style guidelines
+
+## Table of Contents
+
+* [1. Project guidelines](#1-project-guidelines)
+	* [1.1. Project structure](#11-project-structure)
+	* [1.2 File name](#12-filen-naming)
+		* [1.2.1 Class files](#121-class-files)
+		* [1.2.2 Resources files](#121-resources-files)
+			* [1.2.2.1 Drawable files](#1221-drawable-files)
+			* [1.2.2.2 Layout files](#1222-layout-files)
+			* [1.2.2.3 Menu files](#1223-menu-files)
+			* [1.2.2.4 Values files](#1224-values-files)
+* [2. Code guidelines](#2-code-guidelines)
+	* [2.1 Java language rules](#21-java-language-rules)
+	* [2.1.1 Don't ignore exceptions](#211-dont-ignore-exceptions)
+	* [2.1.2 Don't catch generic exception](#212-dont-catch-generic-exception)
+
 # 1. Project guidelines
 
 ## 1.1 Project structure
