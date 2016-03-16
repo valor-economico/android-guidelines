@@ -1,6 +1,6 @@
-# The official Ribot Android project and code style guidelines
+# Guia de estilo para Projetos Android
 
-## Table of Contents
+## Indíce
 
 * [1 Project guidelines](#1-project-guidelines)
 	* [1.1 Project structure](#11-project-structure)
@@ -31,29 +31,38 @@
 	* [2.3 XML style rules](#23-xml-style-rules)
 		* [2.3.1 Use self closing tags](#231-use-self-closing-tags)
 		* [2.3.2 Resources naming](#232-resources-naming)
+		* [2.3.3 Attributes ordering](#233-attributes-ordering)
+	* [2.4 Tests style rules](#24-tests-style-rules)
+	* [Lincese](#license)
 	
 
-# 1. Project guidelines
+# 1. Recomendações para Projeto
 
-## 1.1 Project structure
+## 1.1 Estrutura de Projeto
 
-New projects should follow the Android Gradle project structure that is defined on the [Android Gradle plugin user guide](http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Project-Structure). The [ribot Boilerplate](https://github.com/ribot/android-boilerplate) project is a good reference to start from.
+Novos projetos devem seguir a estrutura de Projeto do Gradle que está disponível em [Guia de usuário Plugin Gradle para Android](http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Project-Structure). O [Ribot Android Boilterplate](https://github.com/ribot/android-boilerplate) é uma boa referência para começar.
 
-## 1.2 File naming
+## 1.2 Nome de arquivos
 
-### 1.2.1 Class files
-Class names are written in [UpperCamelCase](http://en.wikipedia.org/wiki/CamelCase).
+### 1.2.1 Arquivos de Classe
 
-For classes that extend an Android component, the name of the class should end with the name of the component; for example: `SignInActivity`, `SignInFragment`, `ImageUploaderService`, `ChangePasswordDialog`.
+Nome de classe são escritos em [UpperCamelCase](http://en.wikipedia.org/wiki/CamelCase).
 
-### 1.2.2 Resources files
+Para classes que extendem algum componente Android, o nome da calsse deve terminar com o nome do Componente utilizado.
 
-Resources file names are written in __lowercase_underscore__.
+Exemplos:
 
-#### 1.2.2.1 Drawable files
+`SignInActivity`, `SignInFragment`, `ImageUploaderService`, `ChangePasswordDialog`.
 
-Naming conventions for drawables:
+### 1.2.2 Arquivos do tipo Resource
 
+São arquivos encontrados na pasta /src e geralmente são do tipo .xml e .png.
+
+Nome de arquivos de Resource são escritos com letras minúsculas e separados por underscore ( _ ).
+
+#### 1.2.2.1 Arquivos Drawable
+
+Convenção de nomes para Drawables:
 
 | Asset Type   | Prefix            |		Example               |
 |--------------| ------------------|-----------------------------|
@@ -66,7 +75,9 @@ Naming conventions for drawables:
 | Notification | `notification_`	| `notification_bg.9.png`     |
 | Tabs         | `tab_`            | `tab_pressed.9.png`         |
 
-Naming conventions for icons (taken from [Android iconography guidelines](http://developer.android.com/design/style/iconography.html)):
+
+Convenção de nomes para Ícones (Disponível em [Android iconography guidelines](http://developer.android.com/design/style/iconography.html)):
+
 
 | Asset Type                      | Prefix             | Example                      |
 | --------------------------------| ----------------   | ---------------------------- |
@@ -77,7 +88,7 @@ Naming conventions for icons (taken from [Android iconography guidelines](http:/
 | Tab icons                       | `ic_tab`           | `ic_tab_recent.png`          |
 | Dialog icons                    | `ic_dialog`        | `ic_dialog_info.png`         |
 
-Naming conventions for selector states:
+Convenção de nomes para Seletores/Estados:
 
 | State	       | Suffix          | Example                     |
 |--------------|-----------------|-----------------------------|
@@ -647,6 +658,17 @@ As a general rule you should try to group similar attributes together. A good wa
 3. Layout width and layout height
 4. Other layout attributes, sorted alphabetically
 5. Remaining attributes, sorted alphabetically
+
+```xml
+<ImageView
+    android:id="@+id/image_profile"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/black"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true" 
+    android:scaleType="centerCrop" />
+```
 
 ## 2.4 Tests style rules
 
