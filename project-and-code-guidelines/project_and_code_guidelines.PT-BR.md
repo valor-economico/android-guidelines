@@ -2,11 +2,11 @@
 
 ## Indíce
 
-* [1 Project guidelines](#1-project-guidelines)
-	* [1.1 Project structure](#11-project-structure)
-	* [1.2 File name](#12-filen-naming)
-		* [1.2.1 Class files](#121-class-files)
-		* [1.2.2 Resources files](#121-resources-files)
+* [1 Recomendações para Projeto](#1-recomendacoes-para-projeto)
+	* [1.1 Estrutura de Projeto](#11-estrutura-de-projeto)
+	* [1.2 Nome de arquivos](#12-nome-de-arquivos)
+		* [1.2.1 Arquivos de Classe](#121-arquivos-de-classe)
+		* [1.2.2 Arquivos de Resource](#121-arquivos-de-resource)
 * [2 Code guidelines](#2-code-guidelines)
 	* [2.1 Java language rules](#21-java-language-rules)
 		* [2.1.1 Don't ignore exceptions](#211-dont-ignore-exceptions)
@@ -54,7 +54,7 @@ Exemplos:
 
 `SignInActivity`, `SignInFragment`, `ImageUploaderService`, `ChangePasswordDialog`.
 
-### 1.2.2 Arquivos do tipo Resource
+### 1.2.2 Arquivos de Resource
 
 São arquivos encontrados na pasta /src e geralmente são do tipo .xml e .png.
 
@@ -64,7 +64,7 @@ Nome de arquivos de Resource são escritos com letras minúsculas e separados po
 
 Convenção de nomes para Drawables:
 
-| Asset Type   | Prefix            |		Example               |
+|	Tipo		| Prefixo          |		Exemplo               |
 |--------------| ------------------|-----------------------------|
 | Action bar   | `ab_`             | `ab_stacked.9.png`          |
 | Button       | `btn_`	            | `btn_send_pressed.9.png`    |
@@ -76,10 +76,10 @@ Convenção de nomes para Drawables:
 | Tabs         | `tab_`            | `tab_pressed.9.png`         |
 
 
-Convenção de nomes para Ícones (Disponível em [Android iconography guidelines](http://developer.android.com/design/style/iconography.html)):
+Convenção de nomes para Ícones (Disponível em [Guia de iconografia Android](http://developer.android.com/design/style/iconography.html)):
 
 
-| Asset Type                      | Prefix             | Example                      |
+| Tipo			                   | Prefixo            | Exemplo                     |
 | --------------------------------| ----------------   | ---------------------------- |
 | Icons                           | `ic_`              | `ic_star.png`                |
 | Launcher icons                  | `ic_launcher`      | `ic_launcher_calendar.png`   |
@@ -90,7 +90,7 @@ Convenção de nomes para Ícones (Disponível em [Android iconography guideline
 
 Convenção de nomes para Seletores/Estados:
 
-| State	       | Suffix          | Example                     |
+| Estado	    | Sufixo         | Exemplo                     |
 |--------------|-----------------|-----------------------------|
 | Normal       | `_normal`       | `btn_order_normal.9.png`    |
 | Pressed      | `_pressed`      | `btn_order_pressed.9.png`   |
@@ -99,11 +99,11 @@ Convenção de nomes para Seletores/Estados:
 | Selected     | `_selected`     | `btn_order_selected.9.png`  |
 
 
-#### 1.2.2.2 Layout files
+#### 1.2.2.2 Arquivos Layout
 
-Layout files should match the name of the Android components that they are intended for but moving the top level component name to the beginning. For example, if we are creating a layout for the `SignInActivity`, the name of the layout file should be `activity_sign_in.xml`.
+Arquivos de layout devem combinar o nome do componente Android utilizado mas adicionar o nome de component no início. Por exemplo, se estamos criando um layout para `SignInActivity`, o nome do layout deveria ser `activity_sign_in.xml`. 
 
-| Component        | Class Name             | Layout Name                   |
+| Componente       | Nome da Classe         | Nome do Layout                |
 | ---------------- | ---------------------- | ----------------------------- |
 | Activity         | `UserProfileActivity`  | `activity_user_profile.xml`   |
 | Fragment         | `SignUpFragment`       | `fragment_sign_up.xml`        |
@@ -111,9 +111,9 @@ Layout files should match the name of the Android components that they are inten
 | AdapterView item | ---                    | `item_person.xml`             |
 | Partial layout   | ---                    | `partial_stats_bar.xml`       |
 
-A slightly different case is when we are creating a layout that is going to be inflated by an `Adapter`, e.g to populate a `ListView`. In this case, the name of the layout should start with `item_`.
+Um caso ligeriamente diferente acontece quando criamos um layout que será utilizado por um `Adapter`, para preencher uma `ListView`. Neste caso, o nome do layout deveria começar com `item_`.
 
-Note that there are cases where these rules will not be possible to apply. For example, when creating layout files that are intended to be part of other layouts. In this case you should use the prefix `partial_`.
+Observe que há casos onde essas regras não serão possíveis aplicar. Por exemplo, quando criamos um arquivos de layout para ser utilizado como parte de outro layout. Neste caso, você deveria usar o prefixo `partial_`. 
 
 #### 1.2.2.3 Menu files
 
