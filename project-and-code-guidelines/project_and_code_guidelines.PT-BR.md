@@ -7,8 +7,8 @@
 	* [1.2 Nome de arquivos](#12-nome-de-arquivos)
 		* [1.2.1 Arquivos de Classe](#121-arquivos-de-classe)
 		* [1.2.2 Arquivos de Resource](#121-arquivos-de-resource)
-* [2 Code guidelines](#2-code-guidelines)
-	* [2.1 Java language rules](#21-java-language-rules)
+* [2 Padrão de Código](#2-padrao-de-codigo)
+	* [2.1 Regras da Linguagem Java](#21-regras-da-linguagem-java)
 		* [2.1.1 Don't ignore exceptions](#211-dont-ignore-exceptions)
 		* [2.1.2 Don't catch generic exception](#212-dont-catch-generic-exception)
 		* [2.1.3 Don't use finalizers](#213-dont-use-finalizers)
@@ -50,9 +50,7 @@ Nome de classe são escritos em [UpperCamelCase](http://en.wikipedia.org/wiki/Ca
 
 Para classes que extendem algum componente Android, o nome da calsse deve terminar com o nome do Componente utilizado.
 
-Exemplos:
-
-`SignInActivity`, `SignInFragment`, `ImageUploaderService`, `ChangePasswordDialog`.
+Exemplos: `SignInActivity`, `SignInFragment`, `ImageUploaderService`, `ChangePasswordDialog`.
 
 ### 1.2.2 Arquivos de Resource
 
@@ -115,23 +113,25 @@ Um caso ligeriamente diferente acontece quando criamos um layout que será utili
 
 Observe que há casos onde essas regras não serão possíveis aplicar. Por exemplo, quando criamos um arquivos de layout para ser utilizado como parte de outro layout. Neste caso, você deveria usar o prefixo `partial_`. 
 
-#### 1.2.2.3 Menu files
+#### 1.2.2.3 Arquivos Menu
 
-Similar to layout files, menu files should match the name of the component. For example, if we are defining a menu file that is going to be used in the `UserActivity`, then the name of the file should be `activity_user.xml`
+Similar aos arquivos de Layout, arquivos de menu deveriam combinar com o nome do componente. Por exemplo, se criarmos um arquivo de menu que será usado em `UserActivity`, então o nome do arquivo deveria ser `activity_user.xml`.
 
-A good practice is to not include the word `menu` as part of the name because these files are already located in the `menu` directory.
+Uma boa prática é não incluir a palavra `menu` como parte do nome, pois esses arquivos já estão inseridos no diretório `menu`.
 
-#### 1.2.2.4 Values files
+#### 1.2.2.4 Arquivos Values
 
-Resource files in the values folder should be __plural__, e.g. `strings.xml`, `styles.xml`, `colors.xml`, `dimens.xml`, `attrs.xml`
+Arquivos inseridos na pasta values devem estar no __plural__.
 
-# 2 Code guidelines
+Exemplos: `strings.xml`, `styles.xml`, `colors.xml`, `dimens.xml`, `attrs.xml`
 
-## 2.1 Java language rules
+# 2 Padrão de Código
 
-### 2.1.1 Don't ignore exceptions
+## 2.1 Regras da Linguagem Java
 
-You must never do the following:
+### 2.1.1 Não ignore excessões
+
+Você nunca deve usar try/catch conforme o exemplo abaixo:
 
 ```java
 void setServerPort(String value) {
@@ -141,26 +141,27 @@ void setServerPort(String value) {
 }
 ```
 
-_While you may think that your code will never encounter this error condition or that it is not important to handle it, ignoring exceptions like above creates mines in your code for someone else to trip over some day. You must handle every Exception in your code in some principled way. The specific handling varies depending on the case._ - ([Android code style guidelines](https://source.android.com/source/code-style.html))
+_Enquanto você pode pensar que seu código nunca vai cair na condição de erro ou que não é importante para tratar, ignorar excessões como o exemplo acima cria minas no seu código que alguém pode tropeçar um dia. Você deve tratar Excessões no seu código com alguns princípios. O tratamento específico varia dependendo do caso._ - [Padrão de Estilo de Código Android](https://source.android.com/source/code-style.html)
 
-See alternatives [here](https://source.android.com/source/code-style.html#dont-ignore-exceptions).
+Veja alternativas [aqui](https://source.android.com/source/code-style.html#dont-ignore-exceptions).
 
 ### 2.1.2 Don't catch generic exception
 
-You should not do this:
+Você não deveria fazer isto:
 
 ```java
 try {
-    someComplicatedIOFunction();        // may throw IOException
-    someComplicatedParsingFunction();   // may throw ParsingException
-    someComplicatedSecurityFunction();  // may throw SecurityException
+    someComplicatedIOFunction();        // Pode ser uma throw IOException
+    someComplicatedParsingFunction();   // Pode ser uma throw ParsingException
+    someComplicatedSecurityFunction();  // Pode ser uma throw SecurityException
     // phew, made it all the way
-} catch (Exception e) {                 // I'll just catch all exceptions
-    handleError();                      // with one generic handler!
+} catch (Exception e) {                 // Seu catch está para qualquer Excessão
+    handleError();                      // Com apenas um erro genérico!
 }
 ```
 
-See the reason why and some alternatives [here](https://source.android.com/source/code-style.html#dont-catch-generic-exception)
+Veja o motivo do porquê e algumas alternativas [aqui](https://source.android.com/source/code-style.html#dont-catch-generic-exception)
+
 
 ### 2.1.3 Don't use finalizers
 
