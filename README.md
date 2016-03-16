@@ -2,8 +2,19 @@
 
 List of guidelines that we use at [ribot](http://ribot.co.uk) when developing for the __Android__ platform. 
 
+English version:
+
 * [Project and code style guidelines](project_and_code_guidelines.md)
 * [Architecture Guidelines](architecture_guidelines/android_architecture.md)
+
+### Translations
+
+* [Português (PT-BR)](README.PT-BR.md)
+
+### Contributing
+
+* [BR - Valor Econômico](http://github.com/valor-economico)
+
 
 ### License
 
